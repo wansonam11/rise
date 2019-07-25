@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="msg">
+
+<insert id="create">
+	insert into tbl_msg(mid, receiver, sender, message) 
+		values(tbl_msg_seq.nextval, #{receiver}, #{sender}, #{message})
+</insert>
+
+<select id="readMessage" resultType="com.rise.domain.MsgVO">
+	select * from tbl_msg where mid = #{mid}
+</select>
+	
+<update id="updateState">
+	update tbl_msg set opendate=sysdate where mid = #{mid}
+</update>
+
+</mapper>

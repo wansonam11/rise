@@ -33,7 +33,7 @@ public class SearchBoardController {
 		m.addAttribute("list", service.listSearchCriteria(cri));
 		m.addAttribute("cri", cri);	
 		m.addAttribute("pageMaker", maker);
-		System.out.println("°Ô½ÃÆÇ ¸ñ·Ï");
+		System.out.println("ë¦¬ìŠ¤íŠ¸ íŽ˜ì´ì§€");
 	}
 	
 	@RequestMapping(value="/readPage", method=RequestMethod.GET)
@@ -42,7 +42,7 @@ public class SearchBoardController {
 		model.addAttribute(service.read(bno));
 		model.addAttribute("cri", cri);
 		
-		System.out.println("ÀÐÀ» ±Û¹øÈ£ =>" + bno);
+		System.out.println("bno =>" + bno);
 		System.out.println("readPage=>" + cri);
 		//return "/sboard/list"
 	}
@@ -95,13 +95,13 @@ public class SearchBoardController {
 	@RequestMapping(value="/register", method=RequestMethod.POST)
 	public String registPOST(BoardVO vo, RedirectAttributes attr)throws Exception {
 		
-		logger.info("dBÀÔ·Â ¿äÃ».....");
-		System.out.println("ÀÔ·Âµ¥ÀÌÅÍ>> " + vo);
+		logger.info("ë“±ë¡.....");
+		System.out.println("ë“±ë¡>> " + vo);
 		
 		service.regist(vo);
 		attr.addFlashAttribute("msg", "SUCCESS");
 		
-		System.out.println(">>>msg¿¡ SUCCESSÀúÀå!");
+		System.out.println(">>>msgì™€ SUCCESS!!!");
 		
 		return "redirect:/sboard/list";
 	}
