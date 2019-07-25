@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+          "http://mybatis.org/dtd/mybatis-3-config.dtd">       
+<!-- mybatis-config.xml -->
+<configuration>
+    <typeAliases>
+    
+       <!-- 매퍼XML(board.xml)안에서 parameterType="board resultType="board" -->
+       <typeAlias type="com.rise.domain.BoardVO" alias="board"/>
+       <typeAlias type="com.rise.domain.UserVO" alias="user"/>
+      
+       <!-- 매퍼XML(board.xml)안에서 parameterType="BoardVO" resultType="BoardVO" -->
+       <!-- <package name="com.encore.domain"/> -->
+       <package name="com.rise.domain"/>
+       <package name="com.rise.interceptor"/>
+    </typeAliases>
+</configuration>     
