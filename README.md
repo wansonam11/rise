@@ -1,2 +1,2 @@
-# rise
+# RISE
 Personal Project
